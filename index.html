@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alex Rivera - Computer Science Student, Full-Stack Developer & AI Enthusiast. Explore my portfolio, projects, skills, and get in touch." />
+  <meta name="keywords" content="Student Portfolio, Computer Science, Full Stack Developer, AI ML, Web Development, Projects, React, Python" />
+  <meta name="author" content="Alex Rivera" />
+  <meta property="og:title" content="Alex Rivera | Student Developer Portfolio" />
+  <meta property="og:description" content="Computer Science student crafting modern web experiences and intelligent software solutions." />
+  <meta property="og:type" content="website" />
+
+  <title>Alex Rivera | Student Portfolio & Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Skip to Content for Accessibility -->
+  <a href="#home" class="skip-link">Skip to main content</a>
+
+  <!-- Ambient Glowing Background Lights -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- FIXED NAVIGATION BAR COMPONENT -->
+  <header class="header-container" id="site-header">
+    <nav id="main-navbar" class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="nav-content max-width-container">
+        
+        <!-- Brand / Logo -->
+        <a href="#home" class="nav-brand" aria-label="Alex Rivera Portfolio Home">
+          <div class="brand-logo-icon">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-initials">AR</span>
+            <span class="logo-bracket">/&gt;</span>
+          </div>
+          <span class="brand-name">Alex Rivera</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-menu-desktop" id="desktop-menu">
+          <ul class="nav-links" role="menubar">
+            <li role="none">
+              <a href="#home" class="nav-item active" data-section="home" role="menuitem" aria-current="page">
+                <span class="nav-text">Home</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="#about" class="nav-item" data-section="about" role="menuitem">
+                <span class="nav-text">About</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="#skills" class="nav-item" data-section="skills" role="menuitem">
+                <span class="nav-text">Skills</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="#projects" class="nav-item" data-section="projects" role="menuitem">
+                <span class="nav-text">Projects</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="#contact" class="nav-item" data-section="contact" role="menuitem">
+                <span class="nav-text">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Action Button -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-sm btn-outline nav-cta">
+            <span>Get in Touch</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </a>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button 
+            id="mobile-menu-toggle" 
+            class="hamburger-btn" 
+            aria-label="Toggle navigation menu" 
+            aria-expanded="false" 
+            aria-controls="mobile-nav-drawer"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-line line-1"></span>
+              <span class="hamburger-line line-2"></span>
+              <span class="hamburger-line line-3"></span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <span class="drawer-title">Navigation</span>
+          </div>
+          <ul class="mobile-nav-links">
+            <li>
+              <a href="#home" class="mobile-nav-item active" data-section="home">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="mobile-nav-item" data-section="about">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#skills" class="mobile-nav-item" data-section="skills">
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                <span>Skills</span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects" class="mobile-nav-item" data-section="projects">
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="mobile-nav-item" data-section="contact">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="mobile-drawer-footer">
+            <a href="#contact" class="btn btn-primary btn-block mobile-drawer-cta">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              <span>Let's Connect</span>
+            </a>
+            <div class="drawer-socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:alex.rivera@example.edu" aria-label="Email Alex">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Drawer Backdrop -->
+      <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- ========================================= -->
+    <!-- SECTION 1: HOME (HERO) -->
+    <!-- ========================================= -->
+    <section id="home" class="hero-section section-padding">
+      <div class="max-width-container hero-container">
+        
+        <!-- Hero Left Column: Intro & CTA -->
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge-wrapper">
+            <span class="status-badge">
+              <span class="pulse-dot"></span>
+              Available for Summer 2027 Internships
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting">Hi there, I'm</span>
+            <span class="hero-name gradient-text">Alex Rivera</span>
+          </h1>
+
+          <div class="dynamic-role-container" aria-label="Specialization">
+            <span class="role-static">I am a </span>
+            <span class="typing-text" id="typing-element"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate Computer Science student at Stanford University crafting elegant, 
+            high-performance web experiences and intelligent software systems.
+            Bridging modern frontend aesthetics with scalable backend architecture.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary hero-btn">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass hero-btn">
+              <span>Contact Me</span>
+              <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+            </a>
+            <a href="#about" class="btn btn-outline hero-btn" aria-label="Read Alex's Bio">
+              <span>About Me</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Social Links Strip -->
+          <div class="hero-socials">
+            <span class="socials-label">Connect:</span>
+            <div class="social-links-list">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter Profile">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:alex.rivera@example.edu" class="social-icon-btn" aria-label="Email Me Directly">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Interactive Profile Card / Visual -->
+        <div class="hero-visual">
+          <div class="profile-card-glass">
+            <div class="profile-glow-ring"></div>
+            <div class="profile-avatar-wrapper">
+              <div class="avatar-inner">
+                <i class="fa-solid fa-user-graduate student-avatar-icon" aria-hidden="true"></i>
+              </div>
+              <div class="avatar-badge-code">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="profile-card-details">
+              <h2 class="profile-card-name">Alex Rivera</h2>
+              <p class="profile-card-title">B.S. Computer Science '27</p>
+              <div class="profile-chips">
+                <span class="chip"><i class="fa-solid fa-location-dot"></i> Stanford, CA</span>
+                <span class="chip"><i class="fa-solid fa-star"></i> 3.94 GPA</span>
+              </div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-tech-badge badge-top-left" aria-hidden="true">
+              <i class="fa-brands fa-react tech-icon react-color"></i>
+              <span>React</span>
+            </div>
+            <div class="floating-tech-badge badge-top-right" aria-hidden="true">
+              <i class="fa-brands fa-python tech-icon python-color"></i>
+              <span>Python</span>
+            </div>
+            <div class="floating-tech-badge badge-bottom-left" aria-hidden="true">
+              <i class="fa-brands fa-node-js tech-icon node-color"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="floating-tech-badge badge-bottom-right" aria-hidden="true">
+              <i class="fa-solid fa-brain tech-icon ai-color"></i>
+              <span>AI / ML</span>
+            </div>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-number gradient-text">15+</span>
+              <span class="metric-label">Built Projects</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number gradient-text">3x</span>
+              <span class="metric-label">Hackathons Won</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number gradient-text">300+</span>
+              <span class="metric-label">LeetCode Solved</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+        <span class="mouse-icon">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 2: ABOUT -->
+    <!-- ========================================= -->
+    <section id="about" class="about-section section-padding">
+      <div class="max-width-container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">My Journey & Ambitions</h2>
+          <p class="section-subtitle">A glimpse into my academic background, technical philosophy, and future aspirations.</p>
+        </div>
+
+        <!-- About Grid -->
+        <div class="about-grid">
+          
+          <!-- Column 1: Personal Profile & Philosophy -->
+          <div class="about-card profile-bio-card glass-panel">
+            <div class="card-header-icon">
+              <i class="fa-solid fa-compass" aria-hidden="true"></i>
+              <h3>Student Profile</h3>
+            </div>
+            <p class="bio-paragraph">
+              I am a third-year Computer Science student passionate about transforming complex engineering challenges into intuitive, elegant digital products.
+            </p>
+            <p class="bio-paragraph">
+              My engineering philosophy revolves around <strong>clean code</strong>, <strong>user-centric design</strong>, and <strong>continuous experimentation</strong>. Whether optimizing database queries or crafting fluid micro-interactions, I strive for craftsmanship and performance.
+            </p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Major:</span>
+                <span class="info-value">Computer Science (AI & Systems Track)</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fa-solid fa-calendar-check"></i> Expected Graduation:</span>
+                <span class="info-value">June 2027</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fa-solid fa-language"></i> Spoken Languages:</span>
+                <span class="info-value">English (Fluent), Spanish (Conversational)</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fa-solid fa-heart"></i> Interests:</span>
+                <span class="info-value">Distributed Systems, Open Source, UI/UX Design, Robotics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Education & Honors -->
+          <div class="about-card education-card glass-panel">
+            <div class="card-header-icon">
+              <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+              <h3>Education & Academics</h3>
+            </div>
+            
+            <div class="education-timeline">
+              <div class="timeline-entry">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">2023 - Present</div>
+                  <h4 class="edu-degree">Bachelor of Science in Computer Science</h4>
+                  <p class="edu-school">Stanford University &bull; Stanford, CA</p>
+                  <p class="edu-gpa"><strong>GPA:</strong> 3.94 / 4.00 (Dean's List - All Semesters)</p>
+                  
+                  <div class="coursework-wrapper">
+                    <span class="coursework-title">Key Coursework:</span>
+                    <div class="course-tags">
+                      <span class="tag">Data Structures & Algorithms</span>
+                      <span class="tag">Computer Systems Architecture</span>
+                      <span class="tag">Database Management Systems</span>
+                      <span class="tag">Machine Learning & Neural Nets</span>
+                      <span class="tag">Full-Stack Web Engineering</span>
+                      <span class="tag">Operating Systems</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Awards / Honors Ribbon -->
+            <div class="awards-box">
+              <div class="award-item">
+                <i class="fa-solid fa-trophy award-icon" aria-hidden="true"></i>
+                <div class="award-info">
+                  <span class="award-title">1st Place Winner - Stanford TreeHacks 2025</span>
+                  <span class="award-desc">AI Education Track out of 250+ collegiate teams</span>
+                </div>
+              </div>
+              <div class="award-item">
+                <i class="fa-solid fa-medal award-icon" aria-hidden="true"></i>
+                <div class="award-info">
+                  <span class="award-title">Undergraduate Research Fellowship</span>
+                  <span class="award-desc">Grant for Autonomous Navigation & Vision Research</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Career Interests Horizontal Banner -->
+        <div class="career-interests-banner glass-panel">
+          <div class="career-header">
+            <i class="fa-solid fa-bullseye career-icon" aria-hidden="true"></i>
+            <div>
+              <h3 class="career-title">Career Focus & Industry Interests</h3>
+              <p class="career-sub">Areas where I am eager to contribute, innovate, and grow as an engineering intern.</p>
+            </div>
+          </div>
+
+          <div class="career-cards-grid">
+            <div class="career-mini-card">
+              <i class="fa-solid fa-code-merge" aria-hidden="true"></i>
+              <h4>Full-Stack Software Engineering</h4>
+              <p>Designing performant web applications, responsive UIs, and robust microservices.</p>
+            </div>
+            <div class="career-mini-card">
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              <h4>Applied AI & Machine Learning</h4>
+              <p>Integrating LLMs, neural networks, and semantic search into practical products.</p>
+            </div>
+            <div class="career-mini-card">
+              <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              <h4>Cloud & Distributed Systems</h4>
+              <p>Architecting scalable serverless pipelines, containerized workflows, and secure APIs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 3: SKILLS -->
+    <!-- ========================================= -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="max-width-container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">Technical Arsenal</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Tools, languages, and frameworks I use to bring ideas to life.</p>
+        </div>
+
+        <!-- Filter Tabs for Skills -->
+        <div class="skills-filter-nav" role="tablist" aria-label="Skills Category Filter">
+          <button class="skill-tab-btn active" role="tab" aria-selected="true" data-filter="all">All Skills</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-filter="programming">Programming</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-filter="web">Web Dev</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-filter="database">Databases & Cloud</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-filter="ai">AI / ML & Tools</button>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-grid" id="skills-container">
+
+          <!-- Category: Programming Languages -->
+          <div class="skill-card glass-panel" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap python-bg">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">Python</h3>
+            <p class="skill-desc">Data analysis, AI/ML pipelines, backend APIs with FastAPI and Flask.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 92%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap ts-bg">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">TypeScript / JavaScript</h3>
+            <p class="skill-desc">Modern ES6+, type-safe frontend and backend asynchronous applications.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap cpp-bg">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="skill-level-badge">Proficient</span>
+            </div>
+            <h3 class="skill-name">C / C++</h3>
+            <p class="skill-desc">Systems programming, memory management, algorithms, and performance computing.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap java-bg">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <span class="skill-level-badge">Proficient</span>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <p class="skill-desc">Object-oriented software design patterns, Spring Boot, and enterprise fundamentals.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- Category: Web Development -->
+          <div class="skill-card glass-panel" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap react-bg">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">React & Next.js</h3>
+            <p class="skill-desc">Component architecture, custom hooks, SSR/SSG, state management.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 94%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap node-bg">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">Node.js & Express</h3>
+            <p class="skill-desc">RESTful APIs, middleware architecture, JWT authentication, and WebSockets.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap html-bg">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h3 class="skill-name">HTML5 & Modern CSS</h3>
+            <p class="skill-desc">Semantic HTML, Flexbox/Grid, CSS Custom Properties, animations & glassmorphism.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 96%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap tailwind-bg">
+                <i class="fa-solid fa-wind"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">Tailwind CSS & SASS</h3>
+            <p class="skill-desc">Rapid responsive UI prototyping, modular style architectures, and design tokens.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Category: Databases & Cloud -->
+          <div class="skill-card glass-panel" data-category="database">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap pg-bg">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">PostgreSQL & SQL</h3>
+            <p class="skill-desc">Schema design, relational joins, indexing, query optimization, and Prisma ORM.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="database">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap mongo-bg">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">MongoDB & Redis</h3>
+            <p class="skill-desc">Document storage, high-speed in-memory caching, and real-time session management.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="database">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap docker-bg">
+                <i class="fa-brands fa-docker"></i>
+              </div>
+              <span class="skill-level-badge">Proficient</span>
+            </div>
+            <h3 class="skill-name">Docker & Containerization</h3>
+            <p class="skill-desc">Multi-container Docker Compose environments, CI/CD pipeline automation.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="database">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap aws-bg">
+                <i class="fa-brands fa-aws"></i>
+              </div>
+              <span class="skill-level-badge">Intermediate</span>
+            </div>
+            <h3 class="skill-name">AWS & Cloud Services</h3>
+            <p class="skill-desc">EC2, S3 storage, Lambda serverless functions, and CloudFront deployment.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 76%;"></div>
+            </div>
+          </div>
+
+          <!-- Category: AI / ML & Tools -->
+          <div class="skill-card glass-panel" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap pytorch-bg">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <span class="skill-level-badge">Proficient</span>
+            </div>
+            <h3 class="skill-name">PyTorch & Scikit-Learn</h3>
+            <p class="skill-desc">Model training, classification, regression, CNNs, and evaluation pipelines.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap ai-tool-bg">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <h3 class="skill-name">LangChain & OpenAI APIs</h3>
+            <p class="skill-desc">RAG architectures, prompt engineering, embeddings, and vector databases.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap git-bg">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h3 class="skill-name">Git, GitHub & Linux</h3>
+            <p class="skill-desc">Version control, branching strategies, bash scripting, and Linux administration.</p>
+            <div class="skill-meter" aria-hidden="true">
+              <div class="skill-progress" style="width: 95%;"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 4: PROJECTS -->
+    <!-- ========================================= -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="max-width-container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A selection of software engineering projects, web applications, and AI prototypes.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="projects-filter-nav" role="tablist" aria-label="Project Filter Options">
+          <button class="project-tab-btn active" role="tab" aria-selected="true" data-filter="all">All Projects</button>
+          <button class="project-tab-btn" role="tab" aria-selected="false" data-filter="web">Web Apps</button>
+          <button class="project-tab-btn" role="tab" aria-selected="false" data-filter="ai">AI / ML</button>
+          <button class="project-tab-btn" role="tab" aria-selected="false" data-filter="systems">Systems & Cloud</button>
+        </div>
+
+        <!-- Projects Grid Container -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Dynamically populated and static fallback projects rendered via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SECTION 5: CONTACT -->
+    <!-- ========================================= -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="max-width-container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in working together or have an opportunity? Drop me a message!</p>
+        </div>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Contact Left: Contact Information & Socials -->
+          <div class="contact-info-panel glass-panel">
+            <h3 class="contact-info-title">Contact Information</h3>
+            <p class="contact-info-lead">
+              I am actively seeking internship opportunities for Summer & Fall 2027. 
+              Feel free to reach out for collaborations, hackathon teams, or just a chat about tech!
+            </p>
+
+            <div class="contact-methods-list">
+              
+              <!-- Method 1: Email -->
+              <a href="mailto:alex.rivera@example.edu" class="contact-method-card" aria-label="Send email to Alex Rivera">
+                <div class="method-icon-wrap">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Email Me</span>
+                  <span class="method-value">alex.rivera@example.edu</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square method-arrow" aria-hidden="true"></i>
+              </a>
+
+              <!-- Method 2: Location -->
+              <div class="contact-method-card non-interactive">
+                <div class="method-icon-wrap">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Stanford / Silicon Valley, CA</span>
+                </div>
+              </div>
+
+              <!-- Method 3: LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-method-card" aria-label="Visit Alex Rivera on LinkedIn">
+                <div class="method-icon-wrap">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">LinkedIn</span>
+                  <span class="method-value">linkedin.com/in/alex-rivera-cs</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square method-arrow" aria-hidden="true"></i>
+              </a>
+
+              <!-- Method 4: GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-method-card" aria-label="Visit Alex Rivera on GitHub">
+                <div class="method-icon-wrap">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">GitHub</span>
+                  <span class="method-value">github.com/alexrivera-dev</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square method-arrow" aria-hidden="true"></i>
+              </a>
+
+            </div>
+
+            <div class="response-pledge">
+              <i class="fa-solid fa-bolt-lightning pledge-icon" aria-hidden="true"></i>
+              <span>Typically responds within <strong>24 hours</strong>.</span>
+            </div>
+          </div>
+
+          <!-- Contact Right: Interactive Form -->
+          <div class="contact-form-panel glass-panel">
+            <h3 class="form-title">Send a Direct Message</h3>
+            
+            <form id="contact-form" class="contact-form" novalidate>
+              
+              <!-- Form Group: Name -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  <span>Your Name</span> <span class="required-star">*</span>
+                </label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-user input-icon" aria-hidden="true"></i>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    class="form-input" 
+                    placeholder="e.g. Sarah Connor" 
+                    required 
+                    aria-describedby="name-error"
+                  />
+                </div>
+                <span class="field-error-msg" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Form Group: Email -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  <span>Your Email</span> <span class="required-star">*</span>
+                </label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-envelope input-icon" aria-hidden="true"></i>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="e.g. sarah@example.com" 
+                    required 
+                    aria-describedby="email-error"
+                  />
+                </div>
+                <span class="field-error-msg" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Form Group: Subject / Category -->
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">
+                  <span>Subject</span> <span class="required-star">*</span>
+                </label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-bookmark input-icon" aria-hidden="true"></i>
+                  <select id="contact-subject" name="subject" class="form-input form-select" required>
+                    <option value="" disabled selected>Select an inquiry topic...</option>
+                    <option value="internship">Internship / Job Opportunity</option>
+                    <option value="collaboration">Project Collaboration</option>
+                    <option value="hackathon">Hackathon Team Up</option>
+                    <option value="general">General Question / Chat</option>
+                  </select>
+                </div>
+                <span class="field-error-msg" id="subject-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Form Group: Message -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  <span>Your Message</span> <span class="required-star">*</span>
+                </label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-regular fa-message input-icon textarea-icon" aria-hidden="true"></i>
+                  <textarea 
+                    id="contact-message" 
+                    name="message" 
+                    class="form-input form-textarea" 
+                    rows="5" 
+                    placeholder="Tell me about your project, team, or opportunity..." 
+                    required
+                    aria-describedby="message-error"
+                  ></textarea>
+                </div>
+                <span class="field-error-msg" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Form Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block submit-btn" id="contact-submit-btn">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane btn-icon" aria-hidden="true"></i>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================= -->
+  <footer class="site-footer">
+    <div class="max-width-container footer-content">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-brand">
+            <div class="brand-logo-icon">
+              <span class="logo-bracket">&lt;</span>
+              <span class="logo-initials">AR</span>
+              <span class="logo-bracket">/&gt;</span>
+            </div>
+            <span class="brand-name">Alex Rivera</span>
+          </a>
+          <p class="footer-tagline">Building thoughtful software at the intersection of intelligence and design.</p>
+        </div>
+
+        <div class="footer-nav">
+          <span class="footer-nav-title">Quick Links</span>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-column">
+          <span class="footer-nav-title">Find Me Online</span>
+          <div class="footer-social-icons">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="mailto:alex.rivera@example.edu" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">&copy; <span id="current-year">2026</span> Alex Rivera. All rights reserved.</p>
+        
+        <!-- Back to Top Button -->
+        <a href="#home" class="back-to-top-btn" id="back-to-top" aria-label="Scroll back to top of page">
+          <span>Back to top</span>
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================= -->
+  <!-- PROJECT DETAIL MODAL -->
+  <!-- ========================================= -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card glass-panel" role="document">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body" id="modal-body-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
